@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>ViewBank</title>
+{% endblock %}
+
+{% block body %}
+<br/><br/>
+<div class="container">
+    <h2>Bank Details</h2>
+    <br/>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="d-flex ">
+                <div class="me-4 col-6"><strong>User ID :</strong></div><div class="col-6">{{ bdata[0]}}</div>
+            </div>
+            <div class="d-flex ">
+                <div class="me-4 col-6"><strong>User Name :</strong></div><div class="col-6">{{ bdata[1]}}</div>
+            </div>
+            <div class="d-flex ">
+                <div class="me-4 col-6"><strong>Bank Name :</strong></div><div class="col-6">{{ bdata[2]}}</div>
+            </div>
+            <div class="d-flex ">
+                <div class="me-4 col-6"><strong>Account Number :</strong></div><div class="col-6">{{ bdata[3]}}</div>
+            </div>
+            <div class="d-flex ">
+                <div class="me-4 col-6"><strong>Account Type :</strong></div><div class="col-6">{{ bdata[4]}}</div>
+            </div>
+            <div class="d-flex ">
+                <div class="me-4 col-6"><strong>Balance :</strong></div><div class="col-6">{{ bdata[5]}}</div>
+            </div>
+            
+            <br/>
+           
+            <div class="d-flex ">
+                <div class="me-4 col-6"><a class="btn btn-primary" href="{{url_for('dashboard')}}" role="button">Back</a></div>
+            </div>
+        </div>
+    </div>   
+</div>
+{% endblock %}

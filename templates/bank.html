@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Bank Details</title>
+{% endblock %}
+
+{% block body %}
+
+<div align="center">
+    <div align="center" class="border">
+       <div class="header">
+          <h1 class="word">Add Bank Details</h1>
+       </div>
+         
+        <div class="row g-3 justify-content-center ">
+            <div class="col-md-6">
+                <div>{{ msg }}</div>
+                <br/>
+                <form class="" action="{{ url_for('bank') }}" method="POST">
+                    <div class="col-6 text-start">
+                        <label for="inputAddress" class="form-label  ">Username</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Username" name="username">
+                    </div>
+                    <div class="col-6 text-start">
+                        <label for="inputAddress" class="form-label  ">Bank name</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Bank name" name="bank">
+                    </div>
+                    <div class="col-md-6 text-start">
+                    <label for="inputEmail4" class="form-label ">Account number</label>
+                    <input type="text" class="form-control" id="inputEmail4" name="acc_no" placeholder="Account number">
+                    </div>
+                    <div class="col-md-6 text-start">
+                    <label for="inputPassword4" class="form-label ">Account type</label>
+                    <input type="text" class="form-control" id="inputPassword4" name="acc_type" placeholder="Account type">
+                    </div>
+                    <div class="col-6 text-start">
+                    <label for="inputAddress2" class="form-label ">Balance</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Balance" name="balance">
+                    </div>
+                    <br/>
+                    <div class="col-12 mb-4">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div>
+      <p class="bottom">Already added Bank account?  <a class="bottom" href="{{url_for('dashboard')}}"> Goto Dashboard</a></p>
+    </div>
+</div>
+
+
+{% endblock %}
+Footer
